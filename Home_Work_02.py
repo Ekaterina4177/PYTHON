@@ -1,4 +1,4 @@
-# Напишите программу, которая принимает на вход вещественное число 
+""" # Напишите программу, которая принимает на вход вещественное число 
 # и показывает сумму его цифр.
 # Пример:
 # 6782 -> 23
@@ -50,9 +50,9 @@ result = my_list[number_a] * my_list[number_b]
 print(f'Произведение числа "{my_list[number_a]}" на число "{my_list[number_b]}" =' ,result)
 
 # Реализуйте алгоритм перемешивания списка.
-
+ """
 import random
-my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+my_list = ['red', 'green', 'blue', 'gray', 'red', 'green', 'blue', 'gray']
 print ("Дан список = ", my_list)
 for i in range(len(my_list)-1, 0, -1):
     j = random.randint(0, i + 2) 
