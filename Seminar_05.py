@@ -146,6 +146,43 @@ pairs = enumerate(colors)
 print(pairs)
 print(list(pairs))
 
+# Есть N натуральных чисел, записанных через пробел. Среди чисел не хватает одного, 
+# чтобы выполнялось условие A[i] - 1 == A[i-1]. Найдите это число.
+	# my_str = ‘1 2 3 5 6’ => 4
+ 
+n = '1 2 3 5 6 8'
+n = n.split(' ')
+new_n = list(map(int, n))
+
+for i in range(len(new_n)-1):
+    if new_n[i] - 1 == new_n[i-1] > 1:
+        print(new_n[i]+1) # циклом
+        
+result = [new_n[i] + 1 for i in range(len(new_n)-1) if new_n[i] - 1 == new_n[i-1] > 1] # листом комплектации
+print(result)
+
+#Дан список чисел. Создайте список, в который попадают числа, 
+# описываемые возрастающую последовательность. Порядок элементов менять нельзя.
+#Пример: [1, 5, 2, 3, 4, 6, 1, 7] => [1, 5, 6, 7]
+
+numbers = ['1', '5', '2', '3', '4', '6', '1', '7']
+numbers = list(map(int, numbers))
+max = 0
+my_list = []
+for i in range(len(numbers)):
+    if numbers[i] > max:
+        max = numbers[i]
+        my_list.append(max)
+print(my_list)
+
+result = [numbers[i] for i in range(len(numbers)) if numbers[i] > max]
+print(result)
+
+
+# Напишите программу, удаляющую из текста все слова, содержащие "абв".
+
+text = 'Привет, пиабвшу программу удаабвляющую из текста все а, б, и в буквы абв'
+print(text.replace('абв', ''))
 
 colors = ['red', 'green', 'blue']
 for index, item in enumerate(colors):
